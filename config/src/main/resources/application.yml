@@ -1,0 +1,32 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/daixinbao/news #配置 git 仓库地址
+          searchPaths: repo/config #配置仓库路径
+          username: 1065808217@qq.com #访问 git 仓库的用户名
+          password: 950824dxb521 #访问 git 仓库的用户密码
+      label: master #配置仓库的分支
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    username: guest
+    password: guest
+    virtualHost: /
+    publisherConfirms: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info,bus-refresh
