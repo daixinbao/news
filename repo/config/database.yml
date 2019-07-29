@@ -1,7 +1,9 @@
 spring:
   datasource:
     druid:
+      driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://localhost:3306/blog_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      jdbc-url: jdbc:mysql://localhost:3306/blog_db?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
       password: daixinbao
       stat-view-servlet:
