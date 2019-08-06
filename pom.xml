@@ -13,7 +13,6 @@
         <module>config</module>
         <module>common</module>
         <module>client</module>
-        <module>client</module>
     </modules>
     <packaging>pom</packaging>
 
